@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block title %}Report DetailView {{object.name}}{% endblock title %}
+{% block content %} 
+    {% if object.image %}
+        <img src="{{object.image.url}}" class="img-fruid" alt="{{object.name}}">
+    {% endif %}
+    <br>
+    <h3>Remarks</h3>
+    <p>{{object.remarks}}</p>
+    <hr>
+    <p>author: <b>{{object.author.user.usename}}</b> </p>
+    <hr>
+    <p>create: <b>{{object.created}}</b> </p>
+{% endblock content %}

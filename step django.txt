@@ -1,0 +1,31 @@
+learn: https://www.codegrepper.com/code-examples/python/frameworks/django
+
+B1. install pipenv
+pip install pipenv
+B2: Create nameproject
+mkdir nameproject
+cd nameproject
+pipenv install django
+B3. check django-admin
+django-admin
+B4: get path env
+pipenv shell
+B5. Create project " have two project"
+C1: create projec co one folder name
+django-admin startproject nameproject .
+
+C2: create projec co two folder name
+django-admin startproject nameproject
+B6. copy path venv de tao moi truong ao
+pipenv --venv
+
+# De cai dat lai Pipfile sang may khac
+
+pipenv install --skip-lock
+
+
+# su dung requirements
+1. Backup
+pip freeze > requirements.txt
+2. restore
+pip install -r requirments.txt

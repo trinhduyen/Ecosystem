@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block title %}Report ListView {{object.name}}{% endblock title %}
+{% block content %}
+    Report
+    <br>
+    {% for obj in object_list %}
+        <div class="card mb-3" style="width: 18rem;">
+            {% if obj.image %}
+                <img src="{{obj.image.url}}" class="card-img-top" alt="{{obj.name}}">
+            {% endif %}            
+            <div class="card-body">
+                <h5 class="card-title">{{obj.name}}</h5>
+                <p class="card-text">{{obj.remarks|truncatewords:2}}</p>
+                <a href={{obj.get_absolute_url}} class="btn btn-primary">Details</a>
+                <a href="" class="btn btn-danger">pdf</a>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock content %}
